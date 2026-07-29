@@ -58,17 +58,17 @@ exports[`ReputationProfile snapshot – custom maxScore matches snapshot with ma
       class="mt-8 grid gap-4 sm:grid-cols-3"
     >
       <div
-        class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-5"
+        class="rounded-3xl border border-slate-200 bg-slate-50 p-5"
       >
         <p
-          class="text-sm font-medium text-[var(--muted-foreground)]"
+          class="text-sm font-medium text-slate-500"
           id="reputation-score-label"
         >
           Reputation score
         </p>
         <p
           aria-labelledby="reputation-score-label"
-          class="mt-3 text-3xl font-semibold text-[var(--foreground)]"
+          class="mt-3 text-3xl font-semibold text-slate-950"
         >
           <span
             aria-describedby="reputation-legend"
@@ -328,10 +328,17 @@ exports[`ReputationProfile snapshot – custom maxScore matches snapshot with ma
         </span>
       </div>
     </div>
-    <p
+    <div
       aria-atomic="true"
       aria-live="polite"
       class="sr-only"
+      data-testid="reputation-announcer-polite"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      class="sr-only"
+      data-testid="reputation-announcer-assertive"
     />
     <div
       class="space-y-4"
@@ -714,17 +721,17 @@ exports[`ReputationProfile snapshot – edge: score === 0 matches snapshot (fals
       class="mt-8 grid gap-4 sm:grid-cols-3"
     >
       <div
-        class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-5"
+        class="rounded-3xl border border-slate-200 bg-slate-50 p-5"
       >
         <p
-          class="text-sm font-medium text-[var(--muted-foreground)]"
+          class="text-sm font-medium text-slate-500"
           id="reputation-score-label"
         >
           Reputation score
         </p>
         <p
           aria-labelledby="reputation-score-label"
-          class="mt-3 text-3xl font-semibold text-[var(--foreground)]"
+          class="mt-3 text-3xl font-semibold text-slate-950"
         >
           <span
             aria-describedby="reputation-legend"
@@ -925,10 +932,17 @@ exports[`ReputationProfile snapshot – edge: score === 0 matches snapshot (fals
         </span>
       </div>
     </div>
-    <p
+    <div
       aria-atomic="true"
       aria-live="polite"
       class="sr-only"
+      data-testid="reputation-announcer-polite"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      class="sr-only"
+      data-testid="reputation-announcer-assertive"
     />
     <div
       class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--muted-foreground)]"
@@ -1006,17 +1020,17 @@ exports[`ReputationProfile snapshot – full reputation (score + history) matche
       class="mt-8 grid gap-4 sm:grid-cols-3"
     >
       <div
-        class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-5"
+        class="rounded-3xl border border-slate-200 bg-slate-50 p-5"
       >
         <p
-          class="text-sm font-medium text-[var(--muted-foreground)]"
+          class="text-sm font-medium text-slate-500"
           id="reputation-score-label"
         >
           Reputation score
         </p>
         <p
           aria-labelledby="reputation-score-label"
-          class="mt-3 text-3xl font-semibold text-[var(--foreground)]"
+          class="mt-3 text-3xl font-semibold text-slate-950"
         >
           <span
             aria-describedby="reputation-legend"
@@ -1276,10 +1290,17 @@ exports[`ReputationProfile snapshot – full reputation (score + history) matche
         </span>
       </div>
     </div>
-    <p
+    <div
       aria-atomic="true"
       aria-live="polite"
       class="sr-only"
+      data-testid="reputation-announcer-polite"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      class="sr-only"
+      data-testid="reputation-announcer-assertive"
     />
     <div
       class="space-y-4"
@@ -1662,17 +1683,17 @@ exports[`ReputationProfile snapshot – no reputation (null score) matches snaps
       class="mt-8 grid gap-4 sm:grid-cols-3"
     >
       <div
-        class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-5"
+        class="rounded-3xl border border-slate-200 bg-slate-50 p-5"
       >
         <p
-          class="text-sm font-medium text-[var(--muted-foreground)]"
+          class="text-sm font-medium text-slate-500"
           id="reputation-score-label"
         >
           Reputation score
         </p>
         <p
           aria-labelledby="reputation-score-label"
-          class="mt-3 text-3xl font-semibold text-[var(--foreground)]"
+          class="mt-3 text-3xl font-semibold text-slate-950"
         >
           No reputation yet
         </p>
@@ -1738,10 +1759,17 @@ exports[`ReputationProfile snapshot – no reputation (null score) matches snaps
         </span>
       </div>
     </div>
-    <p
+    <div
       aria-atomic="true"
       aria-live="polite"
       class="sr-only"
+      data-testid="reputation-announcer-polite"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      class="sr-only"
+      data-testid="reputation-announcer-assertive"
     />
     <div
       class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--muted-foreground)]"
@@ -1819,17 +1847,17 @@ exports[`ReputationProfile snapshot – no reputation (undefined score) matches 
       class="mt-8 grid gap-4 sm:grid-cols-3"
     >
       <div
-        class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-5"
+        class="rounded-3xl border border-slate-200 bg-slate-50 p-5"
       >
         <p
-          class="text-sm font-medium text-[var(--muted-foreground)]"
+          class="text-sm font-medium text-slate-500"
           id="reputation-score-label"
         >
           Reputation score
         </p>
         <p
           aria-labelledby="reputation-score-label"
-          class="mt-3 text-3xl font-semibold text-[var(--foreground)]"
+          class="mt-3 text-3xl font-semibold text-slate-950"
         >
           No reputation yet
         </p>
@@ -1895,10 +1923,17 @@ exports[`ReputationProfile snapshot – no reputation (undefined score) matches 
         </span>
       </div>
     </div>
-    <p
+    <div
       aria-atomic="true"
       aria-live="polite"
       class="sr-only"
+      data-testid="reputation-announcer-polite"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      class="sr-only"
+      data-testid="reputation-announcer-assertive"
     />
     <div
       class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--muted-foreground)]"
@@ -1976,17 +2011,17 @@ exports[`ReputationProfile snapshot – partial reputation (score, no history) m
       class="mt-8 grid gap-4 sm:grid-cols-3"
     >
       <div
-        class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-5"
+        class="rounded-3xl border border-slate-200 bg-slate-50 p-5"
       >
         <p
-          class="text-sm font-medium text-[var(--muted-foreground)]"
+          class="text-sm font-medium text-slate-500"
           id="reputation-score-label"
         >
           Reputation score
         </p>
         <p
           aria-labelledby="reputation-score-label"
-          class="mt-3 text-3xl font-semibold text-[var(--foreground)]"
+          class="mt-3 text-3xl font-semibold text-slate-950"
         >
           <span
             aria-describedby="reputation-legend"
@@ -2187,10 +2222,17 @@ exports[`ReputationProfile snapshot – partial reputation (score, no history) m
         </span>
       </div>
     </div>
-    <p
+    <div
       aria-atomic="true"
       aria-live="polite"
       class="sr-only"
+      data-testid="reputation-announcer-polite"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      class="sr-only"
+      data-testid="reputation-announcer-assertive"
     />
     <div
       class="rounded-3xl border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--muted-foreground)]"

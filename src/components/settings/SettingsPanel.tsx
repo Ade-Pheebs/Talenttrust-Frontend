@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect, useCallback, memo } from 'react';
+import React, { memo, useState, useRef, useEffect, useCallback } from 'react';
 import { usePreferences, type UserPreferences } from '@/lib/preferences';
 import { useToast } from '@/components/toast/toast-provider';
 import { reportError } from '@/lib/errorReporter';
@@ -15,17 +15,17 @@ const TOAST_DENSITY_OPTIONS = ['relaxed', 'compact'] as const;
 const FORM_DENSITY_OPTIONS = ['comfortable', 'compact'] as const;
 const CONTRACTS_DENSITY_OPTIONS = ['comfortable', 'compact'] as const;
 
-interface RadioGroupProps {
-  options: readonly string[];
-  value: string;
-  onChange: (val: string) => void;
+interface RadioGroupProps<T extends string> {
+  options: readonly T[];
+  value: T;
+  onChange: (val: T) => void;
   labelId: string;
   ariaLabel: string;
   containerClassName: string;
   textClassName: string;
 }
 
-const RadioGroup = memo(function RadioGroup({
+function RadioGroup<T extends string>({
   options,
   value,
   onChange,
@@ -33,10 +33,7 @@ const RadioGroup = memo(function RadioGroup({
   ariaLabel,
   containerClassName,
   textClassName,
-}: RadioGroupProps) {
-  const renderCount = React.useRef(0);
-  renderCount.current += 1;
-
+}: RadioGroupProps<T>) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp'].includes(e.key)) {
       e.preventDefault();
@@ -55,7 +52,6 @@ const RadioGroup = memo(function RadioGroup({
   return (
     <div
       data-testid={`${ariaLabel.toLowerCase().replace(/\s+/g, '-')}-group`}
-      data-render-count={renderCount.current}
       className={containerClassName}
       role="radiogroup"
       aria-labelledby={labelId}
@@ -86,9 +82,7 @@ const RadioGroup = memo(function RadioGroup({
       ))}
     </div>
   );
-});
-
-RadioGroup.displayName = 'RadioGroup';
+}
 
 interface AppearanceSectionProps {
   theme: UserPreferences['theme'];
