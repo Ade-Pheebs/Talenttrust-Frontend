@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@stellar/freighter-api": "^6.0.1",
+    "@tailwindcss/oxide-linux-x64-gnu": "^4.3.3",
     "next": "^16.2.11",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
